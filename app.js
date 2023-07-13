@@ -29,10 +29,10 @@ app.post("/", function (req, res) {
   };
 
   const jsonData = JSON.stringify(data);
-  const url = "https://us10.api.mailchimp.com/3.0/lists/95d4d99c3a";
+  const url = "https://us10.api.mailchimp.com/3.0/lists/your-mailchimp-list-id";
   const options = {
     headers: {
-      Authorization: "Basic " + Buffer.from("kunal1:8e1506d36a8d10d8815426b8ca93755b-us10").toString("base64"),
+      Authorization: "Basic " + Buffer.from("your-mailchimp-api-key").toString("base64"),
     },
   };
 
@@ -54,5 +54,3 @@ app.listen(process.env.PORT || 3000, function () {
 
 
 
-//8e1506d36a8d10d8815426b8ca93755b-us10
-//95d4d99c3a
